@@ -8,7 +8,10 @@ set(CMAKE_CXX_COMPILER "/usr/bin/g++-10")
 
 include_directories(.)
 
+add_executable(6_1 my_tree.h 6_1.cpp)
+
 add_executable(6.2 6_2.cpp)
+add_executable(6.3 6_3.cpp)
 
 add_executable(LockFreeStack LockFreeStack.h LockFreeStack.cpp)
 target_link_libraries(LockFreeStack PRIVATE atomic)
