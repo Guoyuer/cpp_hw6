@@ -7,7 +7,7 @@ root), there will be memory leak. So it is better to have unique_ptr to point to
 its recursive destructor because RAII will do this for us.
 
 And I think a copy constructor is not necessary since we can use raw pointer for the global root. So a shallow copy
-would be easy as we can merely copy the pointer to root.
+would be easy as we can merely copy the root pointer.
 
 Besides, search should return raw pointers instead of move unique_ptr<node> out of the function, since this could lead
 the node accessible and corrupts the tree.
